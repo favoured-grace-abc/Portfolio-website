@@ -21,11 +21,11 @@ function GithubIcon({ size = 18 }) {
 
 const projects = [
   {
-    title: "TaskMaster & Analyzer",
+    title: "Countries Information Hub",
     description:
-      "A dynamic task management and analytical web application designed for organizing workflows, tracking progress, and monitoring operational stats.",
+      "An interactive platform for exploring country data including population, capital, region, languages, and more.",
     tags: ["React", "Tailwind CSS", "JavaScript"],
-    demoUrl: "#",
+    demoUrl: "https://countries-information-hub.vercel.app/",
     githubUrl: "#",
   },
   {
@@ -33,7 +33,7 @@ const projects = [
     description:
       "A beauty and hair-braiding services mobile web application featuring intuitive booking, catalog navigation, and service visualizers.",
     tags: ["React", "Tailwind CSS", "UI/UX"],
-    demoUrl: "#",
+    demoUrl: "https://girlie-app12.vercel.app",
     githubUrl: "#",
   },
   {
@@ -41,7 +41,15 @@ const projects = [
     description:
       "A meeting scheduling application for organizing events, coordinating attendees, and managing meeting details.",
     tags: ["React", "Tailwind CSS", "JavaScript"],
-    demoUrl: "#",
+    demoUrl: "https://meeting-app-one-orcin.vercel.app",
+    githubUrl: "#",
+  },
+  {
+    title: "MEDTRUST AFRICA",
+    description:
+      "A logistics management web application deployed on Firebase for tracking shipments and streamlining delivery operations.",
+    tags: ["React", "Tailwind CSS", "Firebase"],
+    demoUrl: "https://logistics-32d01.web.app",
     githubUrl: "#",
   },
 ];
@@ -64,28 +72,33 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((proj, idx) => (
-          <div
+          <a
             key={idx}
-            className="bg-cardDark border border-borderDark/80 p-6 rounded-2xl flex flex-col justify-between hover:border-zinc-700 transition-all"
+            href={proj.demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-cardDark border border-borderDark/80 p-6 rounded-2xl flex flex-col justify-between hover:border-zinc-700 hover:bg-zinc-100 transition-all group cursor-pointer"
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-medium text-zinc-900">{proj.title}</h3>
+                <h3 className="text-xl font-medium text-zinc-900">
+                  {proj.title}
+                </h3>
                 <div className="flex gap-2 text-textMuted">
                   <a
                     href={proj.githubUrl}
+                    onClick={(e) => e.stopPropagation()}
                     className="hover:text-zinc-900 transition-colors"
                     title="View Code"
                   >
                     <GithubIcon size={18} />
                   </a>
-                  <a
-                    href={proj.demoUrl}
+                  <span
                     className="hover:text-zinc-900 transition-colors"
                     title="Live Demo"
                   >
                     <ExternalLink size={18} />
-                  </a>
+                  </span>
                 </div>
               </div>
               <p className="text-sm text-textMuted leading-relaxed mb-6">
@@ -103,9 +116,9 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-          </div>
+          </a>
         ))}
-      </div>
+    </div>
     </section>
   );
 }

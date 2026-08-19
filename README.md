@@ -40,9 +40,10 @@ portfolio/
 
 ## Featured Projects
 
-- **TaskMaster & Analyzer** — task management and analytical web application
+- **Countries Information Hub** — explore country data including population, capital, region, languages, and more
 - **Girlie App** — beauty and hair-braiding services mobile web app
 - **Meeting App** — meeting scheduling and attendee coordination app
+- **MEDTRUST AFRICA** — logistics management web application deployed on Firebase
 
 ## Getting Started
 

@@ -34,7 +34,7 @@ const projects = [
       "A beauty and hair-braiding services mobile web application featuring intuitive booking, catalog navigation, and service visualizers.",
     tags: ["React", "Tailwind CSS", "UI/UX"],
     demoUrl: "https://girlie-app12.vercel.app",
-    githubUrl: "#",
+    githubUrl: "https://github.com/favoured-grace-abc/girlie-app12",
   },
   {
     title: "Meeting App",
@@ -42,7 +42,7 @@ const projects = [
       "A meeting scheduling application for organizing events, coordinating attendees, and managing meeting details.",
     tags: ["React", "Tailwind CSS", "JavaScript"],
     demoUrl: "https://meeting-app-one-orcin.vercel.app",
-    githubUrl: "#",
+    githubUrl: "https://github.com/favoured-grace-abc/meeting-app",
   },
   {
     title: "MEDTRUST AFRICA",
@@ -87,6 +87,8 @@ export default function Projects() {
                 <div className="flex gap-2 text-textMuted">
                   <a
                     href={proj.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
                     className="hover:text-zinc-900 transition-colors"
                     title="View Code"
